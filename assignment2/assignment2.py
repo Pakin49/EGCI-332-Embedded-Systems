@@ -19,5 +19,4 @@ while(True):
 		GPIO.output(led_pin,GPIO.HIGH)
 	else:
 		GPIO.output(led_pin,GPIO.LOW)
-	print(i)
 	time.sleep(0.02)
