@@ -15,9 +15,9 @@ GPIO.setup(right_sensor,GPIO.IN)
 
 #----- motor output -----
 #left
-in1 = 29 # Front
-in2 = 31 # Back
-enA = 33 # PWM L
+in1 = 32 # Front
+in2 = 36 # Back
+enA = 38 # PWM L
 GPIO.setup(in1, GPIO.OUT)
 GPIO.setup(in2, GPIO.OUT)
 GPIO.setup(enA, GPIO.OUT)
@@ -25,13 +25,14 @@ pl = GPIO.PWM(enA,1000)
 pl.start(0)
 
 #right
-in3 = 32 # Front
-in4 = 36 # Back
-enB = 38 # PWM R
+in3 = 29 # Front
+in4 = 31 # Back
+enB = 33 # PWM R
 GPIO.setup(in3, GPIO.OUT)
 GPIO.setup(in4, GPIO.OUT)
 GPIO.setup(enB, GPIO.OUT)
 pr = GPIO.PWM(enB,1000)
+pr.start(0)
 
 # assume white = low, black = high
 while True:
